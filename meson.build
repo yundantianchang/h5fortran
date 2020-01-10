@@ -8,7 +8,9 @@ subdir('meson')
 subdir('src')
 
 ooh5 = library('h5fortran',
-  sources: hdf5_src,
+  sources: [hdf5_src],
+  fortran_args: [hdf5_libfiles],
+  include_directories: hdf5_inc,
   dependencies: hdf5,
   install: true)
 

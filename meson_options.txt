@@ -1,1 +1,2 @@
 option('test_shaky', type: 'boolean', value: false, description: 'run shaky tests')
+option('hdf5_root', type: 'string', description: 'path to HDF5 library', yield: true)
